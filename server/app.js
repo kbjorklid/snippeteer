@@ -23,10 +23,12 @@ app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 
 
 var SnippetService = require('./lib/services/SnippetService.js');
-var router = express.Router();
+var UserService = require('./lib/services/UserService.js');
 
 app.get('/api/snippet', SnippetService.get);
 app.post('/api/snippet', SnippetService.insert);
+app.get('/api/user', UserService.listAll);
+app.post('/api/user', UserService.insert);
 
 
 app.listen(3000, function() {
