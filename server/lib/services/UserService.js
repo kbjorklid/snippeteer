@@ -1,14 +1,13 @@
+var User = require("../models/User.js");
 
-var Snippet = require("../models/Snippet.js");
-
-exports.get = function(req, res) {
+exports.listAll = function(req, res) {
     console.log("GET");
-    Snippet.fetchAll()
-        .then(function(snippets) {
-            res.send(snippets.toJSON());
+    User.fetchAll()
+        .then(function(users) {
+            res.send(users.toJSON());
         }).catch(function(error) {
             console.log(error);
-            res.send('An error occured');
+            res.send('Error: ' + error);
         });
 };
 
@@ -18,8 +17,7 @@ exports.insert = function(req, res) {
         res.send('ok');
     }).catch(function(error) {
             console.log(error);
-            res.send('An error occurred');
+            res.send('Error: ' + error);
 
         });
 };
-
