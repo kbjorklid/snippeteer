@@ -9,7 +9,6 @@ var Promise = require('bluebird');
 var bookshelf = require('./lib/common/common.js').bookshelf;
 app.set('bookshelf', bookshelf);
 
-require('./lib/config/passport')(passport);
 var auth = require('./lib/common/auth');
 
 var allowCrossDomain = function(req, res, next) {
