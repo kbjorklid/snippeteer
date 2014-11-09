@@ -1,14 +1,22 @@
 {
-  "name": "article_api",
-  "description": "expose articles via JSON",
+  "name": "snippeteer_server",
+  "description": "Server for Snippeteer",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "bluebird": "^2.1.3",
     "body-parser": "^1.3.1",
+    "bookshelf": "*",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.3.3",
     "express": "4.4.3",
-    "pg": "*",
+    "express-session": "^1.9.1",
     "knex": "*",
-    "bookshelf": "*"
+    "morgan": "^1.5.0",
+    "passport": "^0.2.1",
+    "passport-http": "^0.2.2",
+    "passport-local": "^1.0.0",
+    "pg": "*"
   }
 }
